@@ -26,3 +26,11 @@ LIMIT 10;
 
 -- Task 5: Investigate any pollution issues
 
+
+SELECT source_id, number_of_people_served FROM `water_source` order by 2 DESC;
+
+SELECT * FROM `water_source` where source_id NOT IN ('AkRu05234224', 'HaZa21742224');
+
+SELECT count(DISTINCT source_id), sum(number_of_people_served) from `water_source`;
+
+SELECT * FROM employee WHERE position = 'Field Surveyor' AND (employee_name LIKE '% A%' OR employee_name LIKE '% M%') AND(phone_number LIKE '%86%' or phone_number LIKE '%11%');
